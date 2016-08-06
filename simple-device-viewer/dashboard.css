@@ -158,7 +158,10 @@ section {
 	width: 65%;
 	position: relative;
 	vertical-align: middle;
-	
+}
+
+a.item-text {
+	color:#000000;
 }
 
 .item-text.wait, .menu-item a.wait{
