@@ -1,0 +1,102 @@
+   <Macro Name="Forced: Shutdown Computer">
+        <Event Name="HTTP.forceShutdown" />
+        <Action>
+            EventGhost.ShowOSD(u'Shuting Down Computer (forced)', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.PowerDown(True)
+        </Action>
+    </Macro>
+    <Macro Name="Put Computer to Sleep">
+        <Event Name="HTTP.sleep" />
+        <Action>
+            EventGhost.ShowOSD(u'Putting Computer to Sleep', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Standby(False)
+        </Action>
+    </Macro>
+    <Macro Name="Shutdown Computer">
+        <Event Name="HTTP.shutdown" />
+        <Action>
+            EventGhost.ShowOSD(u'Shuting Off Computer', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.PowerDown(False)
+        </Action>
+    </Macro>
+    <Macro Name="Open Netflix">
+        <Event Name="HTTP.openNetflix" />
+        <Action>
+            EventGhost.ShowOSD(u'Opening Netflix', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action Name="Open Netflix">
+            System.Execute(u'firefox.exe', u'https://www.netflix.com/browse/my-list', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Open Vudu">
+        <Event Name="HTTP.openVudu" />
+        <Action>
+            EventGhost.ShowOSD(u'Opening Vudu', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 5, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'firefox.exe', u'http://www.vudu.com/movies/#my_vudu/my_movies', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Open Pandora">
+        <Event Name="HTTP.openPandora" />
+        <Action>
+            EventGhost.ShowOSD(u'Opening Pandora', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 0, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'firefox.exe', u'http://www.pandora.com/', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Open Hulu">
+        <Event Name="HTTP.openHulu" />
+        <Action>
+            EventGhost.ShowOSD(u'Opening Hulu', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 0, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'firefox.exe', u'http://www.hulu.com/', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Open Comcast">
+        <Event Name="HTTP.openComcast" />
+        <Action>
+            EventGhost.ShowOSD(u'Opening Comcast', u'0;-24;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 0, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            System.Execute(u'firefox.exe', u'https://login.comcast.net/login?reqId=11bba380-27e5-472a-bd05-97c988ccd66c&amp;forceAuthn=false&amp;ts=a5c702fe&amp;ipAddrAuthn=false&amp;lang=en&amp;s=wnamp&amp;deviceAuthn=false&amp;r=comcast.net&amp;continue=https%3A%2F%2Fxfinityconnect.mail.comcast.net%2F&amp;passive=false&amp;rm=2', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Pause Show">
+        <Event Name="HTTP.pauseShow" />
+        <Action>
+            EventGhost.ShowOSD(u'Pausing Show', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            Window.SendKeys(u' ', False, 2)
+        </Action>
+    </Macro>
+    <Macro Name="Resume Show">
+        <Event Name="HTTP.resumeShow" />
+        <Action>
+            EventGhost.ShowOSD(u'Resuming Show', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            Window.SendKeys(u' ', False, 2)
+        </Action>
+    </Macro>
+    <Macro Name="Close Firefox">
+        <Event Name="HTTP.closeFirefox" />
+        <Action>
+            EventGhost.ShowOSD(u'Closing Firefox', u'0;-48;0;0;0;700;0;0;0;0;3;2;1;34;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+        </Action>
+        <Action>
+            Window.FindWindow(u'firefox.exe', None, None, None, None, None, False, 0.0, 0)
+        </Action>
+        <Action>
+            Window.Close()
+        </Action>
+    </Macro>
