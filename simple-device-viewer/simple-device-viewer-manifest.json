@@ -1,0 +1,34 @@
+{
+	"namespace":	"krlaframboise",
+	"repoOwner": 	"krlaframboise",
+	"repoName": 	"SmartThings",
+	"repoBranch": 	"master",
+	"name": 	"Simple Device Viewer",
+	"author": 	"Kevin LaFramboise (klaframboise@comcast.net)",
+	"description": 	"Provides web dashboard to view all your devices from any web browser.  Set thresholds for temperature, battery, and last event time and receive Push and/or SMS notifications when they're exceeded.",
+	"category": 	"My Apps",
+	"bannerUrl": 	"https://raw.githubusercontent.com/krlaframboise/Resources/master/simple-device-viewer/simple-device-viewer-banner.png", 
+	"forumUrl": 	"https://community.smartthings.com/t/release-simple-device-viewer/42481",
+	"docUrl": 	"https://community.smartthings.com/t/release-simple-device-viewer/42481",
+	"releaseType":	"production",
+	"keywords": [
+		"dashboard", 
+		"monitoring", 
+		"offline"
+	],
+	"notes": 	"",
+	"smartApps": {
+		"parent": {
+			"name": 	"Simple Device Viewer",
+			"iconUrl": 	"https://raw.githubusercontent.com/krlaframboise/Resources/master/simple-device-viewer/simple-device-viewer-icon-3x.png",
+			"published": 	true,
+			"oAuth":	true,
+			"version": 	"2.5.2",
+			"appSettings": 	{ },
+			"appUrl": 	"smartapps/krlaframboise/simple-device-viewer.src/simple-device-viewer.groovy",
+			"optional": 	false
+		},
+		"children": []
+	},
+	"deviceHandlers": []
+}
